@@ -31,6 +31,8 @@ function App({ sidebarItems }) {
       case 2:
         return <div>Render Scheduler Content</div>;
       case 3:
+        return <div>Grades</div>;
+      case 4:
         return <PublishedProjects />;
       default:
         return null;
@@ -53,7 +55,13 @@ function App({ sidebarItems }) {
 }
 
 App.defaultProps = {
-  sidebarItems: ["Home", "My Classroom", "My Schedule", "Published Projects"],
+  sidebarItems: [
+    "Home",
+    "My Classroom",
+    "My Schedule",
+    "Grades",
+    "Published Projects",
+  ],
   discussions: [
     {
       title: "Technology Update",
