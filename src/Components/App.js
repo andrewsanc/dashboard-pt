@@ -9,21 +9,6 @@ import Sidebar from "./Sidebar";
 function App({ sidebarItems }) {
   const [activeSidebarIndex, setActiveSidebarIndex] = useState(0);
 
-  const renderSidebarMenu = sidebarItems.map((item, i) => {
-    return (
-      <div
-        onClick={() => setActiveSidebarIndex(i)}
-        className={
-          activeSidebarIndex === i
-            ? "border-l-2 border-blue-600 py-1 px-2 font-normal cursor-pointer"
-            : "py-1 px-2 font-normal cursor-pointer"
-        }
-      >
-        {item}
-      </div>
-    );
-  });
-
   const renderContent = () => {
     switch (activeSidebarIndex) {
       case 0:
@@ -43,10 +28,10 @@ function App({ sidebarItems }) {
 
   return (
     <div className='flex'>
-      <Sidebar setActiveSidebarIndex={setActiveSidebarIndex} />
-      {/* <div className='h-screen w-1/6 m-0 p-4 flex flex-col bg-gray-100 border-r-2'>
-        {renderSidebarMenu}
-      </div> */}
+      <Sidebar
+        activeSidebarIndex={activeSidebarIndex}
+        setActiveSidebarIndex={setActiveSidebarIndex}
+      />
       <div className='flex flex-col w-full'>
         <div className='flex'>
           <Profile />

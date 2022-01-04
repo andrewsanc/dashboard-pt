@@ -1,5 +1,4 @@
 import React from "react";
-import GradeListItem from "./GradeListItem";
 
 const Grades = () => {
   return (
