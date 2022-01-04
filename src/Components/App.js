@@ -49,7 +49,9 @@ function App({ sidebarItems }) {
         <div className='flex'>
           <Profile />
         </div>
-        <div className='flex h-full'>{renderContent()}</div>
+        <div className={activeSidebarIndex === 3 ? "" : "flex h-full"}>
+          {renderContent()}
+        </div>
       </div>
     </div>
   );
