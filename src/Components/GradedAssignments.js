@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import moment from "moment";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -93,27 +94,39 @@ const GradedAssignments = ({ gradedAssignments }) => {
 
 GradedAssignments.defaultProps = {
   gradedAssignments: [
-    { title: "RU Lesson 3 VOCABULARY", date: "December 11th, 2021", grade: 95 },
-    { title: "RU Lesson 2 VOCABULARY", date: "December 9th, 2021", grade: 84 },
-    { title: "RU Lesson 1 VOCABULARY", date: "December 7th, 2021", grade: 87 },
+    {
+      title: "RU Lesson 3 VOCABULARY",
+      date: moment().subtract(1, "days").format("LL"),
+      grade: 95,
+    },
+    {
+      title: "RU Lesson 2 VOCABULARY",
+      date: moment().subtract(1, "days").format("LL"),
+      grade: 84,
+    },
+    {
+      title: "RU Lesson 1 VOCABULARY",
+      date: moment().subtract(4, "days").format("LL"),
+      grade: 87,
+    },
     {
       title: "KBC Semester 2 Unit 14 Listening Comprehension Test",
-      date: "December 7th, 2021",
+      date: moment().subtract(5, "days").format("LL"),
       grade: 42,
     },
     {
       title: "Chinese Basic Course Unit 5 Listening",
-      date: "December 6th, 2021",
+      date: moment().subtract(6, "days").format("LL"),
       grade: 67,
     },
     {
       title: "Chinese Basic Course Mid-Unit 9 Listening Test",
-      date: "December 5th, 2021",
+      date: moment().subtract(7, "days").format("LL"),
       grade: 81,
     },
     {
       title: "JN Semster 1 Final FLO Test",
-      date: "December 4th, 2021",
+      date: moment().subtract(8, "days").format("LL"),
       grade: 85,
     },
   ],

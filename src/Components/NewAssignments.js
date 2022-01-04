@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 
 const NewAssignments = () => {
   return (
@@ -33,7 +34,7 @@ const NewAssignments = () => {
       {/* Next Day */}
       <div className='my-6 mx-2'>
         <h5 className='text-xl font-semibold text-gray-700 border-b-2 border-gray-400'>
-          Wednesday, Dec 15th Assignments
+          {moment().add(1, "days").format("LL")} Assignments
         </h5>
         <div className='flex items-center px-4 py-2 border-b-2  border-gray-200 w-full hover:underline hover:text-blue-400'>
           <div className='cursor-pointer text-blue-400'>
@@ -61,7 +62,7 @@ const NewAssignments = () => {
       {/* Day After Next */}
       <div className='my-6 mx-2'>
         <h5 className='text-xl font-semibold text-gray-700 border-b-2 border-gray-400'>
-          Thursday, Dec 16th Assignments
+          {moment().add(2, "days").format("LL")} Assignments
         </h5>
         <div className='flex items-center px-4 py-2 border-b-2  border-gray-200 w-full'>
           No Assignments Scheduled

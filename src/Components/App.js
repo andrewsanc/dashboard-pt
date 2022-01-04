@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Profile from "./Profile";
 import Home from "./Home";
+import Schedule from "./Schedule";
 import Grades from "./Grades";
 import PublishedProjects from "./PublishedProjects";
 import "react-calendar/dist/Calendar.css";
@@ -16,7 +17,7 @@ function App({ sidebarItems }) {
       case 1:
         return <div>Render Classroom Content</div>;
       case 2:
-        return <div>Render Scheduler Content</div>;
+        return <Schedule />;
       case 3:
         return <Grades />;
       case 4:
