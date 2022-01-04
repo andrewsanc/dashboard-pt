@@ -4,6 +4,7 @@ import Home from "./Home";
 import Grades from "./Grades";
 import PublishedProjects from "./PublishedProjects";
 import "react-calendar/dist/Calendar.css";
+import Sidebar from "./Sidebar";
 
 function App({ sidebarItems }) {
   const [activeSidebarIndex, setActiveSidebarIndex] = useState(0);
@@ -42,9 +43,10 @@ function App({ sidebarItems }) {
 
   return (
     <div className='flex'>
-      <div className='h-screen w-1/6 m-0 p-4 flex flex-col bg-gray-100 border-r-2'>
+      <Sidebar setActiveSidebarIndex={setActiveSidebarIndex} />
+      {/* <div className='h-screen w-1/6 m-0 p-4 flex flex-col bg-gray-100 border-r-2'>
         {renderSidebarMenu}
-      </div>
+      </div> */}
       <div className='flex flex-col w-full'>
         <div className='flex'>
           <Profile />
