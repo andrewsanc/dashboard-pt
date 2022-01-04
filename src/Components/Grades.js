@@ -3,34 +3,7 @@ import GradeListItem from "./GradeListItem";
 
 const Grades = () => {
   return (
-    // <table classNameName='table-auto w-full'>
-    //   <thead>
-    //     <tr>
-    //       <th>Name</th>
-    //       <th>Status</th>
-    //       <th>Score</th>
-    //       <th>Out of</th>
-    //       <th></th>
-    //     </tr>
-    //   </thead>
-    //   <tbody>
-    //     <GradeListItem
-    //       name={"Chapter 2 PRACTICE Quiz"}
-    //       status={"Graded"}
-    //       score={8}
-    //       total={10}
-    //       comment={false}
-    //     />
-    //     <GradeListItem
-    //       name={"Chapter 2 PRACTICE Quiz"}
-    //       status={"Graded"}
-    //       score={8}
-    //       total={10}
-    //       comment={false}
-    //     />
-    //   </tbody>
-    // </table>
-    <table className='min-w-full leading-normal'>
+    <table className='min-w-full leading-normal m-2'>
       <thead>
         <tr>
           <th className='px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider'>
